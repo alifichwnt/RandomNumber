@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number Table</title>
+    <link rel="stylesheet" type="text/css" href="./styles1.css">
+</head>
+<body>
+    <!-- Elemen audio untuk memainkan musik latar -->
+    <audio autoplay loop>
+        <!-- Sumber audio musik latar -->
+        <source src="https://github.com/alifichwnt/AudioTesting/raw/main/stranger-things-124008.mp3" type="audio/mpeg">
+        <!-- Teks alternatif jika browser tidak mendukung audio -->
+        Your browser does not support the audio element.
+    </audio>
+    <!-- Elemen audio untuk suara klik -->
+    <audio id="clickSound">
+        <!-- Sumber audio untuk suara klik -->
+        <source src="https://github.com/alifichwnt/AudioTesting/raw/main/sound-1-167181.mp3" type="audio/mpeg">
+        <!-- Teks alternatif jika browser tidak mendukung audio -->
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Bagian header -->
+    <div class="header">
+        <!-- Span untuk menyapa pengguna -->
+        <span id="greeting"></span>
+        <!-- Span untuk menampilkan versi aplikasi -->
+        <span class="version">Versi 0.1</span>
+        <!-- Tombol untuk keluar dari aplikasi -->
+        <a href="about:blank" onclick="window.open('', '_self', ''); window.close();">Quit</a>
+    </div>
+
+    <!-- Container utama -->
+    <div id="container">
+        <!-- Option untuk user memilih mau tabel ukuran berapa -->
+        <select id="tableFormat" onchange="changeTableFormat()">
+            <option value="4x3">4x3</option>
+            <option value="3x3">3x3</option>
+            <option value="4x2">4x2</option>
+            <option value="3x2">3x2</option>
+        </select>
+        
+        <!-- Tabel untuk menampilkan angka random -->
+        <table id="numberTable">
+                <tr>
+                    <td id="cell00" onclick="changeNumber('cell00')">0</td>
+                    <td id="cell01" onclick="changeNumber('cell01')">0</td>
+                    <td id="cell02" onclick="changeNumber('cell02')">0</td>
+                </tr>
+                <tr>
+                    <td id="cell10" onclick="changeNumber('cell10')">0</td>
+                    <td id="cell11" onclick="changeNumber('cell11')">0</td>
+                    <td id="cell12" onclick="changeNumber('cell12')">0</td>
+                </tr>
+                <tr>
+                    <td id="cell20" onclick="changeNumber('cell20')">0</td>
+                    <td id="cell21" onclick="changeNumber('cell21')">0</td>
+                    <td id="cell22" onclick="changeNumber('cell22')">0</td>
+                </tr>
+                <tr>
+                    <td id="cell30" onclick="changeNumber('cell30')">0</td>
+                    <td id="cell31" onclick="changeNumber('cell31')">0</td>
+                    <td id="cell32" onclick="changeNumber('cell32')">0</td>
+                </tr>
+            </table>            
+        </table>
+        <!-- Tombol untuk menghitung total angka dalam tabel -->
+        <button onclick="calculateTotal()">Total</button>
+        <!-- Tombol untuk mencari nilai rerata dalam tabel -->
+        <button onclick="calculateAverage()">Average</button>
+        <!-- Tombol untuk mencari nilai maksimum dalam tabel -->
+        <button onclick="findMax()">Max</button>
+        <!-- Tombol untuk mencari nilai minimum dalam tabel -->
+        <button onclick="findMin()">Min</button>
+        <!-- Tombol untuk mereset tabel -->
+        <button onclick="resetTable()">Reset</button>
+    </div>
+    <!-- Bagian footer -->
+    <footer>
+        <!-- Informasi hak cipta -->
+        <p>&copy; 2024 by Rizky <a href="mailto:22212857@stis.ac.id">(222212857@stis.ac.id)</a></p>
+    </footer>
+    <!-- Memuat file JavaScript -->
+    <script src="./script1.js"></script>
+</body>
+</html>
+
+
+<!--
+    Dalam kode tersebut:
+    - CSS eksternal digunakan untuk styling tabel dan tombol.
+    - JS eksternal digunakan untuk menjalankan fungsi yang dibutuhkan.
+    - Setiap elemen <td> dalam tabel memiliki atribut id yang unik agar dapat diidentifikasi.
+    - Saat pengguna mengklik suatu sel dalam tabel, fungsi changeNumber() dijalankan untuk mengubah bilangan di sel tersebut menjadi bilangan acak.
+    - Terdapat tombol "Hitung" yang, saat diklik, akan menjalankan fungsi calculateTotal() untuk menghitung jumlah semua bilangan dalam tabel dan menampilkannya dalam sebuah kotak pesan menggunakan alert().
+-->

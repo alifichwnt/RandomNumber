@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage Random Table</title>
+    <link rel="stylesheet" type="text/css" href="./styles1.css"> <!-- Menghubungkan dengan file CSS --> <!-- Komentar ini menjelaskan bahwa tag link digunakan untuk menghubungkan file CSS dengan dokumen HTML -->
+</head>
+<body>
+    <div id="container">
+        <h1>Selamat Datang!</h1>
+        <p>Silakan masukkan nama Anda:</p>
+        <input type="text" id="namaInput">
+        <br>
+        <button onclick="lanjut()">OK</button> <!-- Saat tombol ini diklik, fungsi lanjut() akan dipanggil -->
+    </div>
+    <script>
+        function lanjut() {
+            var nama = document.getElementById("namaInput").value; // Mengambil nilai input dari elemen dengan ID "namaInput"
+            if (nama.trim() !== "") { // Memeriksa apakah input nama tidak kosong
+                // Menggunakan window.location.href untuk mengarahkan ke halaman jsRandom.html
+                window.location.href = "jsRandom.html?nama=" + encodeURIComponent(nama); // Mengarahkan ke halaman jsRandom.html dengan menyertakan parameter nama dalam URL
+            } else {
+                alert("Mohon masukkan nama Anda."); // Menampilkan pesan peringatan jika input nama kosong
+            }
+        }
+    </script>
+</body>
+</html>

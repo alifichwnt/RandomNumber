@@ -1,0 +1,251 @@
+/* CSS untuk elemen header */
+.header {
+    font-family: 'Courier New', Courier, monospace;
+    color: black; /* Warna teks */
+    padding: 10px; /* Padding */
+    text-align: center; /* Pusatkan teks */
+    display: flex; /* Menggunakan flexbox untuk tata letak */
+    justify-content:right; /* Pusatkan konten secara horizontal */
+    align-items: center; /* Pusatkan konten secara vertikal */
+    position: fixed; /* Membuat header tetap di posisi atas */
+    top: 0; /* Membuat header tetap di bagian atas halaman */
+    left: 0; /* Membuat header tetap di bagian kiri halaman */
+    width: 100%; /* Mengatur lebar header agar sesuai dengan lebar layar */
+    z-index: 999; /* Mengatur z-index agar header muncul di atas elemen lain */
+    transition: opacity 0.3s ease; /* Efek transisi pada opacity */
+}
+
+#greeting {
+    font-size: 45px; /* Ukuran teks pesan sapaan */
+    margin-right: auto; /* Menggeser pesan sapaan ke ujung kiri */
+    background-color: lightsalmon;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: opacity 0.8s ease; /* Efek transisi pada opacity */
+}
+
+#greeting:hover{
+    opacity: 0.9;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+.header a {
+    color: blue; /* Warna teks tautan */
+    text-decoration: none; /* Hapus dekorasi tautan */
+    font-size: 25px;
+    background-color: lightpink;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.header a:last-child {
+    margin-right: 50px; /* Jarak kanan tombol "Quit" */
+}
+
+.header a:hover {
+    text-decoration: underline; /* Tambahkan garis bawah saat dihover */
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+.version {
+    font-size: 25px; /* Ukuran teks versi */
+    background-color: lightsalmon;
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 20px;
+}
+
+.version:hover{
+    opacity: 0.9;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://media.istockphoto.com/id/629342510/id/foto/latar-belakang-angka-acak-tak-terbatas.jpg?s=1024x1024&w=is&k=20&c=6dL5-3oJMIT0lJ-pl1A0njFkXmDQtytt_sekw2Et9zA=');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#container {
+    background-color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: opacity 0.3s ease; /* Efek transisi pada opacity */
+    border: 5px solid lightsalmon; /* Memberikan warna lightsalmon pada border container */
+}
+
+#container:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    opacity: 0.9; /* Opacity yang berbeda ketika dihover */
+    border: 10px solid lightsalmon;
+}
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#tableFormat{
+    margin-bottom: 20px;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #007bff;
+    color: white;
+}
+
+#tableFormat:hover{
+    background-color: #0056b3;
+}
+
+/* CSS untuk modifikasi tampilan tabel */
+#numberTable {
+    border-collapse: separate; /* Pisahkan batas antar sel */
+    border-spacing: 10px; /* Berikan jarak antara setiap sel */
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+/* CSS untuk modifikasi tampilan tabel */
+#numberTable td {
+    border-style:dotted;
+    padding: 40px; /* Padding yang sama dengan sebelumnya */
+    background-color: #ffffff; /* Warna latar belakang yang sama */
+    border-radius: 10px; /* Sudut yang sama */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Efek bayangan yang sama */
+    cursor: pointer; /* Kursor yang sama */
+    text-align: center;
+    width: 30px;
+}
+
+/* CSS untuk modifikasi tampilan sel saat dihover */
+#numberTable td:hover {
+    background-color: lightslategray;
+    transition: background-color 0.3s ease;
+}
+
+
+td {
+    padding: 20px; /* Padding yang lebih besar */
+    background-color: #ffffff; /* Warna latar belakang */
+    border-radius: 10px; /* Membuat sudut lebih bulat */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    cursor: pointer; /* Ubah kursor menjadi pointer saat dihover */
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    background-color: #fff;
+}
+
+td:hover {
+    background-color: lightslategray;
+    transition: background-color 0.3s ease;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+h1,i {
+    margin-bottom: 2px;
+}
+
+h1:hover, i:hover {
+    text-shadow: 2px 2px 5px rgba(78, 70, 70, 0.8); /* Menambahkan bayangan teks saat dihover */
+}
+
+footer {
+    margin-top: 850px;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 0px;
+    text-align: center;
+    border-top: 2px solid #ccc;
+    border-radius:5px;
+    cursor: pointer;
+    position: fixed;
+    transition: opacity 0.7s ease; /* Efek transisi pada opacity */
+}
+
+footer:hover{
+    opacity: 0.9;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+footer p {
+    margin: 0; /* Menghapus margin default */
+}
+
+footer a {
+    color: blue; /* Memberikan warna teks biru untuk tautan */
+    text-decoration: none; /* Menghapus garis bawah default */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Menambahkan garis bawah saat tautan dihover */
+}
+
+/* CSS internal digunakan untuk styling tabel dan tombol */
+/* Untuk layar dengan lebar maksimum 600px */
+@media only screen and (max-width: 600px) {
+    /* Tambahkan aturan CSS khusus untuk layar berukuran kecil di sini */
+    #greeting{
+        font-size: 20px;
+        padding: 5px;
+    }
+
+    #container{
+        padding: 10px;
+    }
+
+    #tableFormat{
+        font-size: 10px;
+    }
+
+    body {
+        font-size: 14px; /* Contoh: mengatur ukuran font lebih kecil untuk layar kecil */
+    }
+
+    /* Misalnya, untuk membuat tabel menjadi full-width */
+    table {
+        width: 100%;
+    }
+
+    /* Menyembunyikan teks versi pada layar kecil */
+    .version {
+        display: none;
+    }
+
+    /* Mengatur tata letak header untuk layar kecil */
+    .header {
+        text-align: center; /* Misalnya, menengahkan teks di header */
+        padding: 10px; /* Menambahkan padding agar header tidak bertumpuk dengan konten */
+    }
+
+}
